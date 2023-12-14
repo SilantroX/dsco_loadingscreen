@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+		<title>DSCO Loading Screen</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+		<script src="config.js"></script>
+	</head>
+	<body>
+		<div id="background">
+            <script>
+                var videoUrl = "https://www.youtube.com/embed/" + videoConfig.videoId +
+                    "?controls=0&autoplay=" + videoConfig.autoplay +
+                    "&loop=" + videoConfig.loop +
+                    "&playlist=" + videoConfig.videoId +
+                    "&rel=0&vq=" + videoConfig.quality +
+                    "&mute=" + videoConfig.mute;
+                    document.write('<iframe id="video-frame" width="100%" height="100%" src="' + videoUrl + '" frameborder="0" allowfullscreen></iframe>');
+            </script>
+		</div>
+		<div class='center'>
+			<div class='songstop'>Presione <span style='color:rgb(255, 217, 0);'> ESPACIO</span> para pausar la musica </div>
+		</div>
+		<div id="volume-control">
+			<div id="volume-slider"></div>
+			<i id="volume-icon" class="fas fa-volume-up"></i>
+		  </div>
+
+		  <div class="redes-sociales">
+			<script>
+				var tiktok = config.tiktok;
+				var discord = config.discord;
+				var instagram = config.instagram;
+				document.write('<a href="' + tiktok + '" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>');
+				document.write('<a href="' + discord + '" target="_blank" class="discord"><i class="fab fa-discord"></i></a>');
+				document.write('<a href="' + instagram + '" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>');
+			</script>
+		  </div>
+		<div class="loader"></div>
+		<main>
+			<h1 id="title"></h1>
+			<progress id="progress" min="0" max="100" value="0"></progress>
+		</main>
+		<div class="messagebox">
+			<p id="message"></p>
+		</div>
+		<audio id="audio_loading" src="music/song.mp3" autoplay hidden="true" loop="true"></audio>
+		<script src="assets/main.js"></script>
+	</body>
+</html>

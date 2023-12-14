@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nabla&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: #000000a8;
+}
+
+.center {
+    width: 50vh;
+    height: 10vh;
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    margin: -10vh 0 0 -25vh;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    color: #ffffff;
+}
+
+.songstop {
+    top: 0%;
+    font-size: 1.0em;
+}
+
+.loadanim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.loader {
+    /* Estilo del contenedor del cargador */
+    border: 8px solid #ffffffbe;
+    border-top: 8px solid rgb(255, 217, 0);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 92%;
+    left: 5%;
+    margin-top: -40px; /* Mitad de la altura del cargador */
+    margin-left: -40px; /* Mitad de la anchura del cargador */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+@keyframes loading {
+    0% { height: 0; }
+    50% { height: 10vh; }
+    100% { height: 0; }
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #volume-control {
+    position: absolute;
+    right: 1%;
+    width: 25px;
+    height: 150px;
+    background-color: #ffffffbe;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #volume-slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 217, 0);
+    transition: height 0.2s;
+  }
+
+  #volume-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .redes-sociales {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    font-size: 28px;
+    right: 1.7%;
+    bottom: 5%; 
+  }
+
+  .redes-sociales a {
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+  }
+.messagebox {
+    position: absolute;
+    top: 90%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue';
+}
+
+main {
+    position: absolute;
+    width: 60vw;
+    left: 7%;
+    bottom: 6%;
+    text-align: right;
+}
+
+#title {
+    padding-bottom: 10vh;
+    font-size: 20vw;
+    font-weight: bold;
+    color: #FFF;
+}
+
+#message {
+    display: inline-block;
+    left: 30%;
+    transition: opacity 0.25s;
+    color: rgb(255, 217, 0);
+    font-family: 'Bebas Neue';
+}
+
+#percent {
+    float: right;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+progress[value] {
+    width: 100%;
+    height: 2rem;
+    -webkit-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #ffffffbe;
+    border-radius: 1rem;
+}
+
+progress[value]::-webkit-progress-value {
+    transition: width 0.5s;
+}
+
+progress::-webkit-progress-value {
+    background: rgb(255, 217, 0);
+    border-radius: 1rem;
+}
