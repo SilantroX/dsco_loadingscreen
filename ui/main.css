@@ -51,7 +51,6 @@ body {
 }
 
 .loader {
-    /* Estilo del contenedor del cargador */
     border: 8px solid #ffffffbe;
     border-top: 8px solid rgb(255, 217, 0);
     border-radius: 50%;
@@ -61,8 +60,8 @@ body {
     position: fixed;
     top: 92%;
     left: 5%;
-    margin-top: -40px; /* Mitad de la altura del cargador */
-    margin-left: -40px; /* Mitad de la anchura del cargador */
+    margin-top: -40px;
+    margin-left: -40px;
   }
   
   @keyframes spin {
